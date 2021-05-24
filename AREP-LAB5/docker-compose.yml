@@ -1,0 +1,54 @@
+version: '2'
+
+services:
+  loadbalancer:
+    build:
+      context: ./RoundRobin
+      dockerfile: Dockerfile
+    depends_on:
+      - web
+    container_name: loadbalancer
+
+    ports:
+    - "42000:6001"
+  weba:
+      build:
+          context: ./LogService
+          dockerfile: Dockerfile
+      depends_on:
+          - mongoDB
+      links:
+          - mongoDB
+      ports:
+          - "34001:6000"
+  web:
+      build:
+          context: ./LogService
+          dockerfile: Dockerfile
+      depends_on:
+          - mongoDB
+      links:
+          - mongoDB
+      ports:
+          - "34002:6000"
+  webc:
+      build:
+          context: ./LogService.
+          dockerfile: Dockerfile
+      depends_on:
+          - mongoDB
+      links:
+          - mongoDB
+      ports:
+          - "34003:6000"
+  mongoDB:
+    image: mongo:3.6.1
+    volumes:
+      - mongodb:/data/db
+      - mongodb_config:/data/configdb
+    ports:
+      - 27017:27017
+    command: mongod
+volumes:
+    mongodb:
+    mongodb_config:

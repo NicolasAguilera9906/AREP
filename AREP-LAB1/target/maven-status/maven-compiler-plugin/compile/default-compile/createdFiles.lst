@@ -1,0 +1,10 @@
+edu\escuelaing\arem\ASE\app\App.class
+edu\escuelaing\arem\ASE\app\MyCustomLinkedListPackage\MyCustomNode.class
+edu\escuelaing\arem\ASE\app\Services\ComputingService.class
+edu\escuelaing\arem\ASE\app\MyCustomLinkedListPackage\MyCustomLinkedList$1.class
+edu\escuelaing\arem\ASE\app\Calculators\MeanCalculator.class
+edu\escuelaing\arem\ASE\app\Calculators\StandardDesviationCalculator.class
+edu\escuelaing\arem\ASE\app\Calculators\Calculator.class
+edu\escuelaing\arem\ASE\app\MyCustomLinkedListPackage\MyCustomLinkedList.class
+edu\escuelaing\arem\ASE\app\Services\ComputingServiceImpl.class
+edu\escuelaing\arem\ASE\app\MyCustomLinkedListPackage\MyCustomLinkedListIterator.class

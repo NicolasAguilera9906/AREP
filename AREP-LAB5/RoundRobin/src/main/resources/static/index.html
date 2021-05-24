@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="col" style="text-align: center">
+    <h1>Log Service</h1>
+</div>
+<br/>
+<br/>
+<div class="col" style="text-align: center">
+    <label for="log">Enter log:</label>
+    <input id="log" type="text">
+    <br/>
+    <button type="button" onclick = webapp.insertLog(log.value) >Insert Log</button>
+</div>
+<br/>
+<br/>
+<div class="col" style="text-align: center">
+    <button type="button" onclick = webapp.getLogs() >Get 10 last logs!</button>
+</div>
+<br>
+<div class="col" style="text-align: center">
+    <img id="ibai" src="ibai.png" alt="the ibai" style="display : none; margin: 0 auto" width="320" height="427">
+</div>
+<div class="col" style="text-align: center">
+    <table  class="table-bordered" style="margin: 0px auto ; text-align: center" id = "table" >
+        <caption>Logs</caption>
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Content</th>
+            <th scope="col">Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+</body>
+<script src="js/webapp.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="col" style="text-align: center">
+    <h1>Temperature converter</h1>
+</div>
+<br/>
+<br/>
+<div class="col" style="text-align: center">
+    <label for="fahre">Enter the degrees in Fahrenheit to be converted into Celcius
+    </label>
+    <input id="fahre" type="text">
+    <br/>
+    <br/>
+    <button type="button" onclick = webapp.getCelsius(fahre.value) >Get degrees converted</button>
+    <br/>
+    <br/>
+    <p id="rta"></p>
+</div>
+<br/>
+<br/>
+<br/>
+<div class="col" style="text-align: center">
+    <img id="ibai" src="ibai.png" alt="the ibai" style="display : none; margin: 0 auto" width="320" height="427">
+</div>
+<div class="col" style="text-align: center">
+</div>
+
+</body>
+<script src="js/webapp.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</html>
